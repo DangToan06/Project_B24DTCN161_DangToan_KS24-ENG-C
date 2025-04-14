@@ -1,0 +1,908 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    color: #676A6C;
+    list-style: none;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+}
+
+.backgroud-page {
+    background-color: #293846;
+    height: 900px;
+    position: sticky;
+    top: 0;
+    width: 220px;
+    transition: width 0.5s ease;
+    overflow: hidden;
+}
+
+.locaNow {
+    background-color: #1f2b3a;
+}
+
+aside {
+    width: 220px;
+    height: 164px;
+    border: none;
+    background-color: #1f2b3a;
+}
+
+.logo {
+    padding: 56px 15px;
+    width: 100%;
+    height: 44;
+    background-color: #1f2b3a;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    height: 689px;
+
+}
+
+.btn-direction {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #A7B1C2;
+    border: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.btn-direction .icon {
+    width: 30px;
+    height: 30px;
+    color: #A7B1C2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4c5c78;
+}
+
+.btn-sign-out {
+    display: flex;
+    background-color: #12896D;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.icon-sign-out i {
+    width: 30px;
+    height: 30px;
+    background-color: #318b76;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-sign-out span {
+    background-color: #12896D;
+    color: #fff;
+    align-self: center;
+}
+
+.btn-direction:hover {
+    cursor: pointer;
+    background-color: #1f2b3a;
+}
+
+.btn-sign-out span:nth-of-type(2):hover {
+    text-decoration: underline;
+}
+
+/* nội dung chính của trang */
+
+main {
+    flex: 100%;
+    flex-basis: 100px;
+    background-color: #e6e6e6;
+}
+
+.nav-main {
+    width: 100%;
+    height: 6%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    padding: 21.5px 20px;
+    border-bottom: 1px solid rgb(194, 194, 194);
+    background-color: #fff;
+}
+
+.nav-main a {
+    position: absolute;
+    right: 20px;
+}
+
+.btn-detail {
+    width: 46px;
+    height: 32px;
+    background-color: #1AB394;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.16);
+    position: fixed;
+    top: 15px;
+}
+
+.btn-detail i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.btn-detail:hover {
+    background-color: #12896D;
+    box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.25);
+}
+
+main a {
+    text-decoration: none;
+    color: gray;
+    align-self: center;
+}
+
+.title {
+    background-color: #fff;
+    box-shadow: -1px 17px 17px -9px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: -1px 17px 17px -9px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: -1px 17px 17px -9px rgba(0, 0, 0, 0.4);
+}
+
+main a span:hover {
+    text-decoration: underline;
+}
+
+main div h2 {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-weight: 300;
+    line-height: 26.4px;
+    font-size: 24px;
+}
+
+.neft {
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #888;
+    line-height: 19.5px;
+    font-size: 13px;
+    font-weight: 300;
+
+}
+
+.table-list {
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 150px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: -2px -2px 18px 3px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: -2px -2px 18px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: -2px -2px 18px 3px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+}
+
+section h2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.name-food-brand p:nth-of-type(2) {
+    color: #888;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+}
+
+
+/* Lọc dinh dưỡng */
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.text {
+    flex-grow: 1;
+    padding: 5px;
+    color: rgb(100, 100, 100);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    z-index: 100;
+}
+
+.dropdown-menu div {
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropdown-menu div:hover {
+    background: #f0f0f0;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.search-filter {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.search {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(565px, 1fr));
+    gap: 20px;
+}
+
+article {
+    border: 2px solid #eee;
+    width: 100%;
+    height: 220px;
+    margin-top: 31.3px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/*nav thu gọn */
+
+.collapsed {
+    width: 0;
+}
+
+/* list các món ăn */
+.food-menu {
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    align-items: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.name-food-brand {
+    flex: 1.5;
+}
+
+.name-food-brand p {
+    padding-left: 10px;
+}
+
+.name-food-brand p:nth-of-type(1) {
+    padding-top: 10px;
+    padding-bottom: 0;
+    font-size: 13px;
+    line-height: 19.5px;
+    font-weight: 500;
+    color: #3e3f41;
+}
+
+.name-food-brand p:nth-of-type(2) {
+    padding-bottom: 10px;
+    padding-top: 0%;
+}
+
+.nutri-food {
+    flex: 1;
+}
+
+.nutri-food th {
+    font-weight: 500;
+    color: #3e3f41;
+    font-size: 11.7px;
+    line-height: 17.5px;
+}
+
+.nutri-food table td {
+    padding-left: 32px;
+    padding-right: 32px;
+    font-weight: 400;
+    color: #676A6C;
+    line-height: 17.5px;
+    font-size: 11.7px;
+}
+
+.create-food:hover {
+    background-color: #ccc;
+}
+
+.create-food p {
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 15.4px;
+    font-weight: 400;
+    height: 54px;
+    align-content: center;
+    color: #888;
+}
+
+.create-food img {
+    width: 26px;
+    height: 24px;
+    position: relative;
+    top: 7px;
+    margin-left: 10px;
+}
+
+.food-menu:hover {
+    background-color: #f0f0f0;
+}
+
+/* Phân trang */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.page-number,
+.dots {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: white;
+    border-radius: 5px;
+}
+
+.page-number.active {
+    background: #007bff;
+    color: white;
+}
+
+.dots {
+    border: none;
+    cursor: default;
+}
+
+/* Chi tiết food */
+.food-information {
+    position: absolute;
+    width: 100%;
+    height: 1150px;
+    top: 0%;
+    left: 0%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.table-food-information {
+    width: 930px;
+    height: 750px;
+    top: 30px;
+    left: 300px;
+    position: fixed;
+    background-color: #fff;
+    overflow: auto;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+/* list micronutrients */
+.food-information {
+    color: #676A6C;
+}
+
+.btn-close-detail-food {
+    display: block;
+    justify-self: end;
+    cursor: pointer;
+}
+
+.food-information h2 {
+    text-align: center;
+    line-height: 40.9px;
+    font-size: 28.6px;
+    font-weight: 400;
+}
+
+.food-information .note-detail-food {
+    text-align: center;
+    font-weight: 400;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.main-information .main-information-col {
+    display: flex;
+    flex-direction: row;
+    margin-top: 7px;
+}
+
+.main-information .main-information-row {
+    display: flex;
+    gap: 30px;
+}
+
+.main-information div p:nth-of-type(1) {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #eee;
+    align-content: center;
+    background-color: #fafafb;
+    font-weight: 400;
+    padding-left: 11px;
+}
+
+.main-information div p:nth-of-type(2) {
+    width: 300px;
+    height: auto;
+    background-color: #eee;
+    border: 1px solid #eee;
+    align-content: center;
+    padding-left: 11px;
+}
+
+.main-information div p:nth-of-type(3) {
+    background-color: #eee;
+    border: 1px 1px 1px 0px solid #eee;
+    align-content: center;
+    border: 1px solid #eee;
+}
+
+.quantity p:nth-of-type(3) {
+    background-color: #eee;
+    padding-left: 11px;
+}
+
+h4 {
+    width: 100%;
+    height: 40px;
+    align-content: center;
+    border: 2px solid #eee;
+    margin: 10px 0px;
+    color: #1AB394;
+    border-radius: 3px 3px 0 0;
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18.57px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+h3 {
+    justify-self: center;
+    font-weight: 400;
+    font-size: 20.8px;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+/* bảng dưới */
+.macronutrients-row {
+    display: flex;
+    gap: 20px;
+}
+
+.macronutrients-col {
+    display: flex;
+    margin-top: 7px;
+}
+
+.macronutrients-row p:nth-of-type(1) {
+    width: 145px;
+    height: 50px;
+    border: 1px solid #eee;
+    line-height: 21.5px;
+    background-color: #fafafb;
+    align-content: center;
+    padding-left: 11px;
+}
+
+.macronutrients-row p:nth-of-type(2) {
+    width: 225px;
+    height: 50px;
+    border: 1px solid #eee;
+    background-color: #eee;
+    align-content: center;
+    padding-left: 12px;
+}
+
+.macronutrients-row p:nth-of-type(3) {
+    width: 34px;
+    text-align: center;
+    height: 50px;
+    border: 1px solid #eee;
+    background-color: #fafafb;
+    align-content: center;
+}
+
+/* bảng micronutrients */
+
+.list-micronutrients {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.element-micronutrients {
+    display: flex;
+    margin-top: 7px;
+}
+
+.element-micronutrients p:nth-of-type(1) {
+    width: 145px;
+    height: 50px;
+    border: 1px solid #eee;
+    line-height: 21.5px;
+    background-color: #fafafb;
+    align-content: center;
+    font-weight: 400px;
+    font-size: 14, 3px;
+    line-height: 21, 45px;
+    color: #000000;
+    padding-left: 11px;
+}
+
+.element-micronutrients p:nth-of-type(2) {
+    width: 80px;
+    height: 50px;
+    border: 1px solid #eee;
+    background-color: #eee;
+    align-content: center;
+    padding-left: 12px;
+}
+
+.element-micronutrients p:nth-of-type(3) {
+    width: 34px;
+    text-align: center;
+    height: 50px;
+    border: 1px solid #eee;
+    background-color: #fafafb;
+    align-content: center;
+}
+
+.button-detail-information {
+    display: flex;
+    justify-self: end;
+    gap: 5px;
+}
+
+.button-detail-information button:nth-of-type(1) {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #676A6C;
+    margin-bottom: 16px;
+}
+
+.button-detail-information button:nth-of-type(2) {
+    background: #1AB394;
+    color: #fff;
+    border: 1px solid #1AB394;
+    margin-bottom: 16px;
+}
+
+.button-detail-information button:nth-of-type(1):hover {
+    background-color: #ccc;
+}
+
+.button-detail-information button:nth-of-type(2):hover {
+    background: #12896D;
+}
+
+/* tạo thực phẩm mới */
+
+
+
+
+
+
+
+
+
+
+.food-cretive {
+    position: absolute;
+    width: 100%;
+    height: 1150px;
+    top: 0%;
+    left: 0%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.table-food-cretive {
+    width: 930px;
+    height: 750px;
+    top: 30px;
+    left: 300px;
+    position: fixed;
+    background-color: #fff;
+    overflow: auto;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+/* list micronutrients */
+.food-cretive {
+    color: #676A6C;
+}
+
+.btn-close-cretive-food {
+    display: block;
+    justify-self: end;
+    cursor: pointer;
+}
+
+.food-cretive h2 {
+    text-align: center;
+    line-height: 40.9px;
+    font-size: 28.6px;
+    font-weight: 400;
+}
+
+.food-cretive .note-cretive-food {
+    text-align: center;
+    font-weight: 400;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.main-cretive .main-cretive-col {
+    display: flex;
+    flex-direction: row;
+    margin-top: 7px;
+}
+
+.main-cretive .main-cretive-row {
+    display: flex;
+    gap: 30px;
+}
+
+.main-cretive div p:nth-of-type(1) {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #eee;
+    align-content: center;
+    background-color: #fafafb;
+    font-weight: 400;
+    padding-left: 11px;
+}
+
+.main-cretive div p:nth-of-type(2) {
+    width: 300px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #eee;
+    align-content: center;
+    padding-left: 11px;
+}
+
+.main-cretive div p:nth-of-type(3) {
+    background-color: #eee;
+    border: 1px 1px 1px 0px solid #eee;
+    align-content: center;
+    border: 1px solid #eee;
+}
+
+.quantity p:nth-of-type(3) {
+    background-color: #eee;
+    padding-left: 11px;
+}
+
+h4 {
+    width: 100%;
+    height: 40px;
+    align-content: center;
+    border: 2px solid #eee;
+    margin: 10px 0px;
+    color: #1AB394;
+    border-radius: 3px 3px 0 0;
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18.57px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+h3 {
+    justify-self: center;
+    font-weight: 400;
+    font-size: 20.8px;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+/* bảng dưới */
+.macronutrients-row-cretive {
+    display: flex;
+    gap: 20px;
+}
+
+.macronutrients-col-cretive {
+    display: flex;
+    margin-top: 7px;
+}
+
+.macronutrients-row-cretive p:nth-of-type(1) {
+    width: 145px;
+    height: 50px;
+    border: 1px solid #eee;
+    line-height: 21.5px;
+    background-color: #fafafb;
+    align-content: center;
+    padding-left: 11px;
+}
+
+.macronutrients-row-cretive p:nth-of-type(2) {
+    width: 225px;
+    height: 50px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    align-content: center;
+    padding-left: 12px;
+}
+
+.macronutrients-row-cretive p:nth-of-type(3) {
+    width: 34px;
+    text-align: center;
+    height: 50px;
+    border: 1px solid #eee;
+    background-color: #fafafb;
+    align-content: center;
+}
+
+/* bảng micronutrients */
+
+.list-micronutrients-cretive {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.element-micronutrients-cretive {
+    display: flex;
+    margin-top: 7px;
+}
+
+.element-micronutrients-cretive p:nth-of-type(1) {
+    width: 145px;
+    height: 50px;
+    border: 1px solid #eee;
+    line-height: 21.5px;
+    background-color: #fafafb;
+    align-content: center;
+    font-weight: 400px;
+    font-size: 14, 3px;
+    line-height: 21, 45px;
+    color: #000000;
+    padding-left: 11px;
+}
+
+.element-micronutrients-cretive p:nth-of-type(2) {
+    width: 80px;
+    height: 50px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    align-content: center;
+    padding-left: 12px;
+}
+
+.element-micronutrients-cretive p:nth-of-type(3) {
+    width: 34px;
+    text-align: center;
+    height: 50px;
+    border: 1px solid #eee;
+    background-color: #fafafb;
+    align-content: center;
+}
+
+.button-cretive {
+    display: flex;
+    justify-self: end;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.button-cretive button:nth-of-type(1) {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #676A6C;
+    margin-bottom: 16px;
+}
+
+.button-cretive button:nth-of-type(2) {
+    background: #1AB394;
+    color: #fff;
+    border: 1px solid #1AB394;
+    margin-bottom: 16px;
+}
+
+.button-cretive button:nth-of-type(1):hover {
+    background-color: #ccc;
+}
+
+.button-cretive button:nth-of-type(2):hover {
+    background: #12896D;
+}
+
+
+.food-cretive input,
+select {
+    width: 100%;
+    border: none;
+    outline: none;
+}

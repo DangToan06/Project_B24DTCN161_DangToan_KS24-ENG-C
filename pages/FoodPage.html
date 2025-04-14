@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+    <link rel="stylesheet" href="../css/FoodPage.css">
+</head>
+
+<body>
+    <div class="backgroud-page" id="nagative">
+        <aside>
+            <img src="../assets/icons/logo.png" class="logo">
+            <nav id="sidebar">
+                <div class="btn-direction" id="home"><span class="icon"><i class="fa-solid fa-house icon"> </i>
+                    </span>
+                    &nbsp;&nbsp;Homepage</div>
+                <div class="btn-direction locaNow" id="foods"><span class="icon"><i class="fa-solid fa-bowl-food icon">
+                        </i> </span>
+                    &nbsp;&nbsp;Foods</div>
+                <div class="btn-direction" id="recipes"><span class="icon"><i class="fa-solid fa-receipt icon"> </i>
+                    </span>
+                    &nbsp;&nbsp;Recipes</div>
+            </nav>
+            <div class="btn-sign-out">
+                <span class="icon-sign-out"><i class="fa-solid fa-user-plus"> </i></span>
+                &nbsp;&nbsp;<span id="signOut">Sign out</span>
+            </div>
+        </aside>
+
+    </div>
+
+    <main>
+        <nav class="nav-main">
+            <button class="btn-detail" id="btn-detail"><i class="fa-solid fa-bars"></i></button>
+            <a href="w"><span id="userName">Đặng Toàn</span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a>
+        </nav>
+
+        <div class="title">
+            <h2>Food</h2>
+            <p class="neft">Create, check and update Foods</p>
+        </div>
+
+        <section class="table-list">
+            <h2>Food</h2>
+            <p class="neft">Create, check and update Foods</p>
+            <nav class="search-filter">
+                <input type="text" placeholder=" Search food" class="search" id="search">
+                <div class="dropdown-container">
+                    <div class="icon" id="sortIcon"><i class="fa-solid fa-arrow-up-short-wide"></i></div>
+                    <div class="text" id="selected-nutrient">Sort by nutrient</div>
+                    <div class="icon" id="dropdownIconNutrient"><i class="fa-solid fa-sort-down"></i></div>
+                    <div class="dropdown-menu" id="dropdownMenuNutrient">
+                        <div onclick="selectOption('Protein')">Protein</div>
+                        <div onclick="selectOption('Carbs')">Carbs</div>
+                        <div onclick="selectOption('Fats')">Fats</div>
+                        <div>Vitamins</div>
+                    </div>
+                </div>
+                <div class="dropdown-container">
+                    <div class="text" id="selected-categorys">All categorys</div>
+                    <div class="icon" id="dropdownIconCategorys"><i class="fa-solid fa-sort-down"></i></div>
+                    <div class="dropdown-menu" id="dropdownMenuCategrys">
+                        <div onclick="selectCategory('Vegetable dishes')">Vegetable dishes</div>
+                        <div onclick="selectCategory('Low Added Sugar')">Low Added Sugar</div>
+                        <div onclick="selectCategory('Breakfast and snacks')">Breakfast and snacks</div>
+                        <div onclick="selectCategory('Vasiliki Stavrou')">Vasiliki Stavrou</div>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="listFoods">
+                <!-- <div class="food-menu">
+                    <div class="name-food-brand">
+                        <p>Ackee, canned, drained</p>
+                        <p>McCance and Winddow'son</p>
+                    </div>
+                    <div class="nutri-food">
+                        <table>
+                            <tr>
+                                <th>151 kcal</th>
+                                <th>15 g</th>
+                                <th>1 g</th>
+                                <th>3 g</th>
+                            </tr>
+                            <tr>
+                                <td>Energy</td>
+                                <td>Fat</td>
+                                <td>Carbohydrate</td>
+                                <td>Protein</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- nút tạo mới -->
+            <div class="create-food" id="create-food">
+                <p>
+                    <img src="../assets/icons/addFood.png">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create food
+                </p>
+            </div>
+
+            <!-- phân trang -->
+            <div class="pagination">
+                <button id="prevBtn">❮ Previous</button>
+                <div id="pageNumbers"></div>
+                <button id="nextBtn">Next ❯</button>
+            </div>
+
+        </section>
+
+
+        <!-- Thông tin chi tiết foods -->
+        <section class="food-information" id="food-information">
+            <div class="table-food-information" >
+                <i class="fa-solid fa-xmark btn-close-detail-food" id="btn-close-detail-food"></i>
+                <h2>Food information</h2>
+                <p class="note-detail-food">Check and update the information about the food</p>
+                <div class="main-information" id="main-information">
+                    <div class="main-information-row">
+                        <div class="main-information-col">
+                            <p>Name</p>
+                            <p>Ackee, canned, drained</p>
+                        </div>
+                        <div class="main-information-col">
+                            <p>Source</p>
+                            <p>McCance and Widdowson's</p>
+                        </div>
+                    </div>
+                    <div class="main-information-row">
+                        <div class="main-information-col">
+                            <p>Category</p>
+                            <p>Vegetables and Vegetable Products</p>
+                        </div>
+                        <div class="main-information-col quantity">
+                            <p style="flex: 1;">Quantity</p>
+                            <p style="flex: 1; background-color: white;">100</p>
+                            <p style="flex: 1; background-color: white;">grams</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Nutritional value per 100 g</h4>
+
+                <h3>Macronutrients</h3>
+
+
+                <div id="macronutrients-row">
+                    <!-- <div class="macronutrients-row">
+                        <div class="macronutrients-col">
+                            <p>Energy</p>
+                            <p>151.0</p>
+                            <p>kcal</p>
+                        </div>
+                        <div class="macronutrients-col">
+                            <p>Fat</p>
+                            <p>15.2</p>
+                            <p>g</p>
+                        </div>
+                    </div>
+                    <div class="macronutrients-row">
+                        <div class="macronutrients-col">
+                            <p>Carbohydrate</p>
+                            <p>0.8</p>
+                            <p>g</p>
+                        </div>
+                        <div class="macronutrients-col">
+                            <p>Protein</p>
+                            <p>2.9</p>
+                            <p>g</p>
+                        </div>
+                    </div> -->
+                </div>
+
+                <h3>Micronutrients</h3>
+
+                <div class="list-micronutrients" id="list-micronutrients"></div>
+
+                <div class="button-detail-information">
+                    <button id="btn-close-table-detail" style="background-color: blue; color: #fff;">Edit</button>
+                    <button id="btn-save-table-detail">Save and close</button>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- thêm food -->
+        <section class="food-cretive" id="food-cretive">
+            <div class="table-food-cretive">
+                <i class="fa-solid fa-xmark btn-close-cretive-food" id="btn-close-cretive-food"></i>
+                <h2>Add new food</h2>
+                <p class="note-cretive-food">Fill in the fields below with the food information</p>
+                <div class="main-cretive">
+                    <div class="main-cretive-row">
+                        <div class="main-cretive-col">
+                            <p>Name</p>
+                            <p><input type="text" id="name"></p>
+                        </div>
+                        <div class="main-cretive-col">
+                            <p>Source</p>
+                            <p id="Account"></p>
+                        </div>
+                    </div>
+                    <div class="main-cretive-row">
+                        <div class="main-cretive-col">
+                            <p>Category</p>
+                            <p>
+                                <select id="category">
+                                    <option value="">select the food group</option>
+                                    <option value="Vegetables and Vegetable Products">Vegetables and Vegetable Products</option>
+                                    <option value="Meat">Meat</option>
+                                    <option value="Breakfast">Breakfast</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="main-cretive-col quantity">
+                            <p style="flex: 1;">Quantity</p>
+                            <p style="flex: 1; background-color: white;"><input type="text" id="quantity"></p>
+                            <p style="flex: 1; background-color: white;">grams</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Nutritional value per 100 g</h4>
+
+                <h3>Macronutrients</h3>
+
+
+                <div>
+                    <div class="macronutrients-row-cretive">
+                        <div class="macronutrients-col-cretive">
+                            <p>Energy</p>
+                            <p><input type="text" id="energy"></p>
+                            <p>kcal</p>
+                        </div>
+                        <div class="macronutrients-col-cretive">
+                            <p>Fat</p>
+                            <p><input type="text" id="fat"></p>
+                            <p>g</p>
+                        </div>
+                    </div>
+                    <div class="macronutrients-row-cretive">
+                        <div class="macronutrients-col-cretive">
+                            <p>Carbohydrate</p>
+                            <p><input type="text" id="carbohydrate"></p>
+                            <p>g</p>
+                        </div>
+                        <div class="macronutrients-col-cretive">
+                            <p>Protein</p>
+                            <p><input type="text" id="protein"></p>
+                            <p>g</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Micronutrients</h3>
+
+                <div class="list-micronutrients-cretive" id="list-micronutrients-cretive">
+
+                </div>
+
+                <div class="button-cretive">
+                    <button id="btn-close-table-cretive">Cancel</button>
+                    <button id="btn-save-table-cretive">Save and close</button>
+                </div>
+            </div>
+        </section>
+
+        <script src="../js/DataBase.js"></script>
+        <script src="../js/FoodPage.js"></script>
+</body>
+
+</html>

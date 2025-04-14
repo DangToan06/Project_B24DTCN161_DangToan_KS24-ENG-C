@@ -1,0 +1,923 @@
+.coating{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.9;
+    background-color: #242424;
+    z-index: 150;
+    display: none;
+}
+
+.hidde{
+    display: none;
+}
+
+.box-input-img{
+    z-index: 160;
+    width: 40%;
+    height: 35%;
+    position:fixed;
+    background-color: #fff;
+    top: 200px;
+    left: 500px;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 15px;
+    display: none;
+}
+
+.box-input-img i{
+    align-self: end;
+    flex: 1;
+    cursor: pointer;
+}
+
+.box-input-img input{
+    width: 95%;
+    cursor: pointer;
+    color: #242424;
+    height: 30px;
+}
+
+.box-input-img label{
+    font-size: 30px;
+    color: #242424;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.box-input-img span{
+    flex: 0,8;
+    justify-content: space-between;
+    align-self: end;
+    margin-top: 100px;
+}
+
+.box-input-img span button:nth-of-type(1){
+    background-color: #bc3d57;
+    color: #fff;
+}
+
+.box-input-img span button:nth-of-type(2){
+    background-color: #158b73;
+    color: #fff;
+}
+
+.box-input-img span button:nth-of-type(1):hover{
+    background-color: #963044;
+    color: #ccc;
+}
+
+.box-input-img span button:nth-of-type(2):hover{
+    background-color: #0f5a4b;
+    color: #ccc;
+}
+
+.community-recipes-basic-information {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-main{
+    height: 65px;
+}
+
+.board-category {
+    width: 330px;   
+    height: 327px;
+    top: 192px;
+    left: 15px;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-right: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 5px 5px 10px 0px #9191911F;
+}
+
+.image-recipes{
+    position: absolute;
+    height: 270px;
+    width: 310px;
+    object-fit: cover;
+    top: 210px;
+    display: none;
+}
+
+.board-category button{
+    position: relative;
+    top: 130px;
+    left: -190px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    font-size: 30px; 
+}
+
+.board-category button i{
+    color: #2BA0CC;
+    z-index: 10;
+}
+
+.like-container-detail{
+    z-index: 10;
+    opacity: 0.7;
+}
+
+.board-category .Community-Recipes-Detail {
+    box-shadow: 0px 1px 3px 0px #DDDDDD;
+    width: auto;
+    height: 28.5px;
+    top: 30px;
+    left: 28px;
+    border-radius: 6px;
+    position: static;
+    margin-top: 42px;
+    margin-left: 20px;
+}
+
+.table-list{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.Community-Recipes-Detail .add-recipes {
+    width: auto;
+    color: #2BA0CC;
+}
+
+.community-recipes-category-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-card-detail {
+    border: 2px solid #F3F3F4;
+    border-radius: 3px;
+    align-items: center;
+    padding: 0px 7px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    display: flex;
+    height: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    width: auto;
+    z-index: 10;
+    background-color: #fff;
+    opacity: 0.9;
+}
+
+.category-card-detail input{
+    border: none;
+    outline: none;
+    width: auto;
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.category-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-card-detail img {
+    width: 12px;
+    height: 12px;
+}
+
+.show{
+    display: flex;
+}
+
+.group-like-cretive-category{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-add-categorys{
+    border: none;
+    outline: none;
+}
+
+.category-card-detail p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 12px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #676A6C;
+    margin-left: 5px;
+}
+
+.information-publish {
+    margin-right: 20px;
+    width: 100%;
+}
+
+.publish-recipe {
+    background-color: #fff;
+    margin-top: 29px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.publish-recipe h3 {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+.publish-recipe p {
+    font-family: Open Sans;
+    font-weight: 300;
+    font-size: 11.81px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #888;
+}
+
+.publish-recipe button {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #1AB394;
+    color: #fff;
+}
+
+.publish-recipe button:hover{
+    background-color: #0f5a4b;
+}
+
+/* bảng thông tin cơ bản */
+
+.boart-basic-information {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0px #3030301f;
+}
+
+.boart-basic-information h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    vertical-align: middle;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.boart-basic-information p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    color: #888;
+    vertical-align: middle;
+    margin-top: 2px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.text-boart-basic-information {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.box-boart-basic-information {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+.box-boart-basic-information span:nth-of-type(1) {
+    background-color: #FAFAFB;
+    border: 1px solid #EEEEEE;
+    border-width: 1px;
+    font-weight: 400;
+    font-size: 14.3px;
+    line-height: 21.45px;
+    vertical-align: middle;
+    color: #676A6C;
+    width: 200px;
+    height: auto;
+    align-content: center;
+    padding: 10px 11px;
+}
+
+.box-boart-basic-information span:nth-of-type(2) {
+    border: 1px solid #EEEEEE;
+    width: 60%;
+    height: 100%;
+    align-content: center;
+    padding: 10px 10px;
+    margin-right: 0%;
+}
+
+.box-boart-basic-information span:nth-of-type(3) {
+    border: 1px solid #EEE;
+    width: 39px;
+    height: auto;
+    align-content: center;
+    text-align: center;
+    background-color: #FAFAFB;
+}
+
+.box-boart-basic-information span:nth-of-type(3) img {
+    width: 18px;
+    height: 18px;
+}
+
+.add-to-favorite {
+    background-color: #fff;
+    width: 170px;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #EEEEEE;
+    margin-left: 15px;
+    align-content: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 17.14px;
+    vertical-align: middle;
+}
+
+.title-creative-choose {
+    width: 97.69%;
+    height: 61px;
+    border-radius: 5px;
+    background-color: #1AB394;
+    margin-left: 15px;
+    margin-top: 25px;
+    padding-top: 11px;
+    padding-left: 15px;
+}
+
+.title-creative-choose h4 {
+    font-weight: 400;
+    font-size: 16.9px;
+    line-height: 25.35px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.title-creative-choose p {
+    font-weight: 300;
+    font-size: 10.8px;
+    line-height: 16.2px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.text-boart-basic-information input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+/* BANG THANH PHAN CHI TIET */
+
+.ingredients-index-caculator {
+    display: flex;
+    gap: 30px;
+}
+
+.ingredients-index-caculator-1 {
+    flex: 2.8;
+}
+
+.ingredients-index-caculator {
+    height: 1250px;
+    background-color: #e6e6e6;
+}
+
+.ingredients-index-caculator .ingredients {
+    display: block;
+    width: 100%;
+    
+    
+    border-radius: 5px;
+    margin-left: 15px;
+    padding: 20px;
+}
+
+.list-add-foods{
+    overflow: auto;
+    height: auto;
+    max-height: 700px;
+}
+
+.ingredients h4 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+.ingredients p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+.ingredients .box-ingredient-detail {
+    margin-top: 16px;
+    padding-left: 11px;
+    display: flex;
+    align-items: center;
+    border: none;
+    height: 10%;
+}
+
+.box-ingredient-detail p{
+    border: 2px solid #EEEEEE;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 100%;
+    vertical-align: middle;
+    align-content: center;
+    word-wrap: break-word;
+    line-height: 42px;
+    flex: 20;
+}
+
+.box-ingredient-detail i{
+    background-color: #fafafb;
+    border: none;
+    height: 50px;
+    flex: 1;
+    cursor: pointer;
+    width: 100px;
+    height: 44.9px;
+    text-align: center;
+    align-content: center;
+    background-color: #DB4965;
+    color: #fff;
+}
+
+.box-ingredient-detail i:hover{
+    background-color: #bc3d57;
+    color: #ccc;
+}
+
+/* BANG HƯỚNG DẪN CÁCH LÀM */
+
+.ingredients-index-caculator .cooking-method {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 15px;
+    padding: 20px;
+}
+
+.cooking-method h4 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+.cooking-method span {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: middle;
+    color: #888;
+}
+
+.cooking-method .cooking-method-box {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #eee;
+    margin-top: 15px;
+}
+
+.input-method{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 200px;
+}
+
+.cooking-method-box p:nth-of-type(1) {
+    flex: 1;
+    text-align: center;
+    border-right: 2px solid #EEEEEE;
+    width: 40px;
+    height: auto;
+    background-color: #FAFAFB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cooking-method-box p:nth-of-type(2) {
+    flex: 10;
+    padding: 10px;
+    word-wrap: break-word;
+    width: 703px;
+}
+
+/* BẢNG TÍNH TOÀN CHỈ SỐ DINH DƯỠNG */
+
+.ingredients-index-caculator-2 {
+    flex: 1;
+}
+
+.global-analysis-per-portion {
+    width: 376px;
+    height: 249px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-right: 15px;
+}
+
+.global-analysis-per-portion {
+    display: block;
+    padding: 20px;
+}
+
+.global-analysis-per-portion h4 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.global-analysis-per-portion p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: middle;
+    color: #888;
+}
+
+.global-analysis-per-portion .energy-value {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #EEE;
+}
+
+.energy-value span {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19.5px;
+    vertical-align: middle;
+}
+
+.energy-value div span:nth-of-type(1) {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    vertical-align: middle;
+}
+
+.energy-value div span:nth-of-type(2) {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16.5px;
+    vertical-align: middle;
+}
+
+.note-macronutrients-per-portion {
+    display: flex;
+    text-align: center;
+    margin-top: 25px;
+    gap: 16.8px;
+}
+
+.circle-macronutrients {
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+    align-content: center;
+}
+
+.note-macronutrients-per-portion .circle:nth-of-type(1) .circle-macronutrients {
+    border: 7px solid #DB4965;
+}
+
+.note-macronutrients-per-portion .circle:nth-of-type(2) .circle-macronutrients {
+    border: 7px solid #EA9F77;
+}
+
+.note-macronutrients-per-portion .circle:nth-of-type(3) .circle-macronutrients {
+    border: 7px solid #1AB394;
+}
+
+.note-macronutrients-per-portion .circle:nth-of-type(4) .circle-macronutrients {
+    border: 7px solid #6A7D93;
+}
+
+.circleZero{
+    border: 7px solid #dadada;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+    align-content: center;
+}
+
+.circle span {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19.5px;
+    text-align: center;
+    vertical-align: middle;
+    color: #888;
+}
+
+
+
+/* Biểu đồ tròn */
+.macronutrients-per-portion {
+    display: block;
+    padding: 20px;
+    height: auto;
+    width: 376px;
+}
+
+.macronutrients-per-portion h4 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.subtitle {
+    font-weight: 300;
+    font-size: 11.81px;
+    line-height: 18px;
+    vertical-align: middle;
+    color: #888;
+}
+
+canvas {
+    padding-top: 15px;
+    transition: transform 0.4s ease;
+}
+
+canvas:hover {
+    transform: scale(1.03);
+}
+
+.micronutrients-per-portion {
+    display: block;
+    padding: 20px;
+    height: auto;
+    width: 376px;
+}
+
+.micronutrients-per-portion h4 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.micronutrients-per-portion p {
+    font-weight: 300;
+    font-size: 11.81px;
+    line-height: 18px;
+    vertical-align: middle;
+    color: #888;
+}
+
+.micronutrients-per-portion ul {
+    margin-top: 15px;
+}
+
+.micronutrients-per-portion li {
+    display: flex;
+    justify-content: space-between;
+    line-height: 38px;
+}
+
+.micronutrients-per-portion li:nth-child(even) {
+    background-color: #FAFAFB;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.text {
+    flex-grow: 1;
+    padding: 5px;
+    color: rgb(100, 100, 100);
+}
+
+/* .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    z-index: 100;
+} */
+
+/* .dropdown-menu div {
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dropdown-menu div:hover {
+    background: #f0f0f0;
+} */
+
+/* .rotate {
+    transform: rotate(180deg);
+} */
+
+.search-filter {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.search {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(565px, 1fr));
+    gap: 20px;
+}
+
+/* article {
+    border: 2px solid #eee;
+    width: 100%;
+    height: 220px;
+    margin-top: 31.3px;
+    border-radius: 5px;
+    background-color: #fff;
+} */
+
+
+.food-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+    flex: 20;
+    border: 1px solid #ccc;
+}
+
+.name-food-brand {
+    flex: 1.5;
+}
+
+.name-food-brand p {
+    padding-left: 10px;
+}
+
+.name-food-brand p:nth-of-type(1) {
+    padding-top: 10px;
+    padding-bottom: 0;
+    font-size: 13px;
+    line-height: 19.5px;
+    font-weight: 500;
+    color: #3e3f41;
+}
+
+.name-food-brand p:nth-of-type(2) {
+    padding-bottom: 10px;
+    padding-top: 0%;
+}
+
+.nutri-food {
+    flex: 1;
+}
+
+.nutri-food th {
+    font-weight: 500;
+    color: #3e3f41;
+    font-size: 11.7px;
+    line-height: 17.5px;
+}
+
+.nutri-food table td {
+    padding-left: 32px;
+    padding-right: 32px;
+    font-weight: 400;
+    color: #676A6C;
+    line-height: 17.5px;
+    font-size: 11.7px;
+}
+
+.create-food:hover{
+    background-color: #ccc;
+}
+
+.create-food p{
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 15.4px;
+    font-weight: 400;
+    height: 54px;
+    align-content: center;
+    color: #888;
+}
+
+.create-food img {
+    width: 26px;
+    height: 24px;
+    position: relative;
+    top: 7px;
+    margin-left: 10px;
+}
+
+.list-foods{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.boat-list-food{
+    display: flex;
+    flex-direction: row;
+}
+
+.list-foods i{
+    height: auto;
+    margin-top: 15px;
+    flex: 1;
+    width: 50px;
+    text-align: center;
+    height: 59px;
+    align-content: center;
+    background-color: #1AB394;
+    color: #fff;
+    cursor: pointer;
+}
+
+.list-foods i:hover{
+    background-color: #158b73;
+    color: #DDDDDD;
+}
+
+.list-mic{
+    overflow: auto;
+    max-height: 900px;
+}
+
+.error{
+    border: 1px solid red !important;
+}
+

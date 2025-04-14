@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    </link>
+    <!-- tạo biểu đồ tròn -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/Recipes.css">
+    <link rel="stylesheet" href="../css/RecipeDetail.css">
+    <link rel="stylesheet" href="../css/AddNewRecipe.css">
+</head>
+
+<body>
+    <div class="coating" id="coating"></div>
+
+    <div class="box-input-img" id="box-input-img">
+        <i class="fa-solid fa-xmark" id="close-box-add-img"></i>
+        <label>Add link image</label>
+        <input type="text" id="input-link-img">
+        <span>
+            <button id="cancle-box-img">Cancle</button>
+            <button id="save-box-add-img">Save</button>
+        </span>
+    </div>
+
+    <div class="backgroud-page" id="nagative">
+        <aside>
+            <img src="../assets/icons/logo.png" class="logo">
+            <nav id="sidebar">
+                <div class="btn-direction" id="home"><span class="icon"><i class="fa-solid fa-house icon"> </i>
+                    </span>
+                    &nbsp;&nbsp;Homepage</div>
+                <div class="btn-direction" id="foods"><span class="icon"><i class="fa-solid fa-bowl-food icon"> </i>
+                    </span>
+                    &nbsp;&nbsp;Foods</div>
+                <div class="btn-direction  locaNow" id="recipes"><span class="icon"><i class="fa-solid fa-receipt icon">
+                        </i>
+                    </span>
+                    &nbsp;&nbsp;Recipes</div>
+            </nav>
+            <div class="btn-sign-out">
+                <span class="icon-sign-out"><i class="fa-solid fa-user-plus"> </i></span>
+                &nbsp;&nbsp;<span>Sign out</span>
+            </div>
+        </aside>
+
+    </div>
+
+
+    <main>
+        <nav class="nav-main">
+            <button class="btn-detail" id="btn-detail"><i class="fa-solid fa-bars"></i></button>
+            <a href="w" id="acc"><span>Đặng Toàn</span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a>
+        </nav>
+
+        <div class="title">
+            <h2>Recipes</h2>
+            <p>Create, check and update recipes</p>
+        </div>
+
+        <section class="community-recipes-basic-information">
+            <div>
+                <article class="board-category">
+                    <img class="image-recipes" id="image-recipes">
+                    <div class="community-recipes-category-card">
+                        <!-- <img src="../assets/images/Turmeric Roasted Cauliflower Salad (lowfodmap).jpg"
+                                class="illustration"> -->
+                        <div class="Community-Recipes Community-Recipes-Detail">
+                            <img src="../assets/icons/addRecipes.png" style="width: 20px; height: 14px;">
+                            <p class="add-recipes">My recipes</p>
+                        </div>
+                        <div class="category-card category-card-detail">
+                            <img src="../assets/icons/newCategory.png">
+                            <p id="box-list-add-categorys">
+                                <select class="list-add-categorys" id="list-add-categorys">
+                                    <!-- <option disabled selected>Add category</option>
+                                    <option>a</option>
+                                    <option>s</option>
+                                    <option>f</option>
+                                    <option>g</option>
+                                    <option>h</option> -->
+                                </select>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group-like-cretive-category" id="likeButton">
+                        <div class="like-container like-container-detail" id="click-like">
+                            <span class="heart-icon " id="unlike"><i class="fa-regular fa-heart"></i></span>
+                            <span class="heart-icon heart-none" id="like">❤️</span>
+                            <span class="like-count" id="likeCount">0</span>
+                        </div>
+                        <div>
+                            <div class="category-card-cretive category-card-detail">
+                                <img src="../assets/icons/newCategory.png">
+                                <p id="box-input-creative-category"><input type="text" placeholder="Cre Category" id="input-creative-category"></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button  id="btn-add-img"><i class="fa-solid fa-plus"></i></button>
+                </article>
+            </div>
+
+            <div class="information-publish">
+                <div class="publish-recipe">
+                    <div>
+                        <h3>Publish Recipe</h3>
+                        <p>Publish your recipe on your website or share it with the Nutrium community</p>
+                    </div>
+                    <div>
+                        <button id="btn-save-recipes">Publish</button>
+                    </div>
+                </div>
+
+                <article class="boart-basic-information">
+
+                    <div class="text-boart-basic-information">
+                        <h3>Basic information</h3>
+                        <p>Check and edit recipe's basic infomation</p>
+                        <div class="box-boart-basic-information">
+                            <span>Name</span>
+                            <span id="box-name"><input type="text" id="name"></span>
+                            <span><img src="../assets/icons/edit.png"></span>
+                        </div>
+                        <div class="box-boart-basic-information">
+                            <span>Description</span>
+                            <span id="box-description"><input type="text" id="description"></span>
+                            <span><img src="../assets/icons/edit.png"></span>
+                        </div>
+                        <div class="box-boart-basic-information">
+                            <span>Author</span>
+                            <span id="nameRecipes" class="nameRecipes"></span>
+                            <span><img src="../assets/icons/edit.png"></span>
+                        </div>
+                        <div class="box-boart-basic-information">
+                            <span>Total time</span>
+                            <span id="box-totalTime"><input type="text" id="totalTime"></span>
+                            <span><img src="../assets/icons/edit.png"></span>
+                        </div>
+                        <div class="box-boart-basic-information">
+                            <span>Preparation time</span>
+                            <span id="box-preparationTime"><input type="text" id="preparationTime"></span>
+                            <span><img src="../assets/icons/edit.png"></span>
+                        </div>
+                        <div class="box-boart-basic-information">
+                            <span>Final weight</span>
+                            <span id="finalQuantity"></span>
+                            <span><img src="../assets/icons/edit.png"></span>
+                        </div>
+                        <div class="box-boart-basic-information">
+                            <span>Portions</span>
+                            <span id="box-portions"><input type="text" id="portions"></span>
+                            <span><img src="../assets/icons/edit.png"></span>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+
+        </section>
+
+        <div class="title-creative-choose">
+            <h4>Creation</h4>
+            <p>Create the recipe and choose the ingredients</p>
+        </div>
+
+        <div class="ingredients-index-caculator">
+            <div class="ingredients-index-caculator-1">
+                <article class="ingredients">
+                    <h4>Ingredients</h4>
+                    <p>Search and add ingredients to the recipe</p>
+                    <ul class="list-add-foods" id="list-add-foods">
+
+                    </ul>
+                   
+                </article>
+
+                <section class="table-list">
+                    <h2>Add food</h2>
+                    <nav class="search-filter">
+                        <input type="text" placeholder=" Search food" class="search" id="search">
+                        <div class="dropdown-container">
+                            <div class="icon" id="sortIcon"><i class="fa-solid fa-arrow-up-short-wide"></i></div>
+                            <select class="dropdown-menu" id="dropdownMenuNutrient">
+                                <option selected>Sort by nutrient</option>
+                                <option>Protein</option>
+                                <option>Carbohydrate</option>
+                                <option>Fats</option>
+                                <option>Energy</option>
+                            </select>
+                        </div>
+                        <div class="dropdown-container">
+                            <select class="dropdown-menu" id="dropdownMenuCategrys">
+                                
+                            </select>
+                        </div>
+                    </nav>
+
+                    <div id="listFoods" class="list-foods">
+                        
+
+                    </div>
+
+
+                    <!-- phân trang -->
+                    <div class="pagination">
+                        <button id="prevBtn">❮ Previous</button>
+                        <div id="pageNumbers"></div>
+                        <button id="nextBtn">Next ❯</button>
+                    </div>
+
+                </section>
+                <article class="cooking-method">
+                    <h4>Cooking method</h4>
+                    <span>Give instructions to prepare this recipe</span>
+                    <div class="cooking-method-box">
+                        <p>1</p>
+                        <p id="box-input-method"><textarea placeholder="Add new method" class="input-method" id="input-method"></textarea></p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="ingredients-index-caculator-2">
+                <article class="global-analysis-per-portion">
+                    <h4>Global analysis per portion</h4>
+                    <p>Energy, macronutrients and fiber distribution</p>
+                    <div class="energy-value" >
+                        <span id="show-energy">Energy</span>
+                        <div>
+                            <span id="energy-value">351</span>
+                            <span>kcal</span>
+                        </div>
+                    </div>
+
+                    <div class="note-macronutrients-per-portion" id="note-macronutrients-per-portion">
+                        <!-- <div class="circle">
+                            <div class="circle-macronutrients" id="circle-macronutrients-fat">
+                                16g
+                            </div>
+                            <span>Fat</span>
+                        </div>
+                        <div class="circle">
+                            <div class="circle-macronutrients" id="circle-macronutrients-carb">
+                                45g
+                            </div>
+                            <span>Carbohydrate</span>
+                        </div>
+                        <div class="circle">
+                            <div class="circle-macronutrients" id="circle-macronutrients-protein">
+                                12g
+                            </div>
+                            <span>Protein</span>
+                        </div>
+                        <div class="circle">
+                            <div class="circle-macronutrients" id="circle-macronutrients-fiber">
+                                6g
+                            </div>
+                            <span>Fiber</span>
+                        </div> -->
+                    </div>
+
+                </article>
+
+                <article class="macronutrients-per-portion">
+                    <h4>Macronutrients per portion</h4>
+                    <p class="subtitle">Macronutrients distribution of the recipe</p>
+                    <canvas id="macronutrientChart"></canvas>
+                </article>
+
+                <article class="micronutrients-per-portion">
+                    <h4>Micronutrients per portion</h4>
+                    <p>Micronutrients distribution of the recipe</p>
+                    <ul id="list-mic" class="list-mic">
+                        
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </main>
+    <script src="../js/DataBase.js"></script>
+    <script src="../js/AddNewRecipe.js"></script>
+</body>
+
+</html>

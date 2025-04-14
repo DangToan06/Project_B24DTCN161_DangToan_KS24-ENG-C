@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #212529;
+    font-family: "Roboto", sans-serif;
+    line-height: 24px;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+form {
+    width: 398px;
+    height: 441.14px;
+    justify-self: center;
+    margin-top: 106.43px;
+}
+
+.box-input {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    margin-top: 0.43px;
+    margin-left: 54px;
+    margin-right: 55px;
+    margin-bottom: 23px;
+    width: 189px;
+    height: 44px;
+}
+
+h1 {
+    margin-bottom: 16.59px;
+    font-weight: 400;
+    line-height: 33.6px;
+}
+
+.box-input {
+    border: 1px solid #eff0f1;
+    border-radius: 10px;
+}
+
+.sign-in-email {
+    border: none;
+    padding: 19.5px 13px;
+    border-radius: 10px 10px 0 0;
+}
+
+.sign-in-passwd {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-top: 2px solid #eff0f1;
+    padding: 19.5px 13px;
+    border-radius: 0 0 10px 10px;
+}
+
+.form-check {
+    margin-top: 17px;
+}
+
+.text-content {
+    margin-top: 16px;
+}
+
+.btn{
+    width: 100%;
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+}
+
+.text-origin {
+    margin-top: 48px;
+}
+
+input::placeholder {
+    color: #212529;
+    opacity: 1;
+}
+
+.sign-in-failed{
+    background-color: #FFE5E8;
+    width: 299px;
+    height: 106px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 22px;
+    left: 26px;
+    display: none;
+}
+
+.x-error{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.btn-delete{
+    border: none;
+    background-color: #FFE5E8;
+}
+
+.icon-minus{
+    color: #E8132A;
+    background-color: #eff0f1;
+    border-radius: 50%;
+}
+
+.btn-delete{
+    background-color: #FFE5E8;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.icon-x{
+    border-radius: 50%;
+    background-color: #445275;
+    color: #fff3f5;
+}
+
+.text-error{
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.sign-in-successfully{
+    width: 299px;
+    height: 58px;
+    background-color: #E5FFF0;
+    position: absolute;
+    top: 22px;
+    left: 26px;
+    border-radius: 10px;
+    padding-top: 16px;
+    padding-left: 16px;
+    display: none;
+}
+
+.icon-tick{
+    color: #02EE6A;
+}
