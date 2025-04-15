@@ -3,6 +3,10 @@
     flex-direction: row;
 }
 
+body{
+    height: 2400px;
+}
+
 .board-category {
     width: 330px;
     height: 327px;
@@ -16,6 +20,14 @@
     box-shadow: 5px 5px 10px 0px #9191911F;
 }
 
+.image-recipes{
+    position: absolute;
+    height: 270px;
+    width: 310px;
+    object-fit: cover;
+    top: 250px;
+}
+
 .board-category .Community-Recipes-Detail {
     box-shadow: 0px 1px 3px 0px #DDDDDD;
     width: 190px;
@@ -25,7 +37,7 @@
     border-radius: 6px;
     position: static;
     margin-top: 42px;
-    margin-left: 20px;
+    margin-left: 1px;
 }
 
 .like-container-detail {
@@ -37,6 +49,7 @@
     border-radius: 4px;
     border-width: 1px;
     margin-right: 28px;
+    z-index: 100;
 }
 
 .community-recipes-category-card {
@@ -51,17 +64,25 @@
     align-items: center;
     padding: 0px 7px;
     margin-bottom: 30px;
-    margin-left: 20px;
+    margin-left: 1px;
+    z-index: 100;
+    background-color: #fff;
+    opacity: 0.9;
+    width: 150px;
 }
 
-.category-card-detail p {
-    font-weight: 400;
+.category-card-detail span {
+    margin-left: 5px;
+    max-width: auto;
+}
+
+.category-card-detail span p{
+    font-weight: 600;
     font-size: 11.06px;
     line-height: 13px;
     letter-spacing: 0%;
     vertical-align: middle;
-    color: #676A6C;
-    margin-left: 5px;
+    color: #292929;
 }
 
 /* bảng thông tin cơ bản */
@@ -374,6 +395,18 @@
     border: 7px solid #6A7D93;
 }
 
+.circleZero{
+    border: 7px solid #dadada;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+    align-content: center;
+}
+
 .circle span {
     font-weight: 400;
     font-size: 13px;
@@ -422,6 +455,8 @@ canvas:hover {
     padding: 20px;
     height: auto;
     width: 376px;
+    overflow: auto;
+    max-height: 850px;
 }
 
 .micronutrients-per-portion h4{

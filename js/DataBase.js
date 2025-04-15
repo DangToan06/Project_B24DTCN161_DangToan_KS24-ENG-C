@@ -168,7 +168,7 @@ class Recipe {
   constructor(
     conerSrc, name, description, author, totalTime,
     preparationTime, finalWeight, portions, ingredients,
-    cookingMethods, categorys, like, numberLike) {
+    cookingMethods, categorys, like, numberLike, id) {
     this.conerSrc = conerSrc;
     this.name = name;
     this.description = description;
@@ -182,6 +182,7 @@ class Recipe {
     this.categorys = categorys;
     this.like = like;
     this.numberLike = numberLike;
+    this.id = id;
   }
 }
 
@@ -721,7 +722,8 @@ let communityRepices = [
     drizzle with the dressing.`,
     "Vegetable",
     false,
-    10
+    10,
+    1
   ),
   new Recipe(
     "../assets/images/Vegetable & Egg Scramble (lowfodmap).jpeg",
@@ -767,7 +769,8 @@ let communityRepices = [
       STEP 3 Serve with a side of yogurt dip and fresh lime wedges.`,
     "Meat",
     false,
-    23
+    23,
+    2
   ),
   
   new Recipe(
@@ -814,7 +817,8 @@ let communityRepices = [
       STEP 3 Stuff peppers, bake for 30 minutes, and garnish with cilantro.`,
     "Vegetable",
     false,
-    7
+    7,
+    3
   ),
   new Recipe(
     "../assets/images/Asian Chicken Almond Salad.jpeg",
@@ -843,7 +847,8 @@ let communityRepices = [
       STEP 3 Cook for another 5 minutes and serve with rice.`,
     "Meat",
     false,
-    22
+    22,
+    4
   ),
   new Recipe(
     "../assets/images/Spicy Sausage and Veggie Stir Fry.webp",
@@ -903,7 +908,8 @@ let communityRepices = [
       STEP 3 Stir in Parmesan and serve with a sprinkle of parsley.`,
     "Vegetable",
     false,
-    31
+    31,
+    5
   ),
   new Recipe(
     "../assets/images/Spicy Sausage and Veggie Stir Fry.webp",
@@ -963,7 +969,8 @@ let communityRepices = [
       STEP 3 Serve with maple syrup.`,
     "Dessert",
     false,
-    77
+    77,
+    6
   ),
   new Recipe(
     "../assets/images/Berry Almond Smoothie.jpg",
@@ -1009,7 +1016,8 @@ let communityRepices = [
       STEP 3 Stir in fish sauce, lime, and basil before serving with rice.`,
     "Meat",
     false,
-    70
+    70,
+    7
   ),
   new Recipe(
     "../assets/images/Spicy Sausage and Veggie Stir Fry.webp",
@@ -1055,7 +1063,8 @@ let communityRepices = [
       STEP 3 Season with salt and pepper before serving.`,
     "Vegetable",
     false,
-    33
+    33,
+    8
   ),
   new Recipe(
     "../assets/images/Berry Almond Smoothie.jpg",
@@ -1114,7 +1123,8 @@ let communityRepices = [
       STEP 3 Toss with pasta and top with pepper.`,
     "Pasta",
     false,
-    55
+    55,
+    9
   ),
   new Recipe(
     "../assets/images/High Protein Blueberry Cheesecake.png",
@@ -1206,7 +1216,8 @@ let communityRepices = [
       STEP 3 Bake at 220C for 20 minutes until crispy.`,
     "Vegetable",
     false,
-    63
+    63,
+    10
   ),
   new Recipe(
     "../assets/images/Green Beans With Tofu and Roasted Peanuts (lowfodmap).jpg",
@@ -1266,7 +1277,8 @@ let communityRepices = [
       STEP 3 Serve with tzatziki and flatbread.`,
     "Meat",
     false,
-    22
+    22,
+    11
   ),
   new Recipe(
     "../assets/images/Turmeric Roasted Cauliflower Salad (lowfodmap).jpg",
@@ -1312,54 +1324,56 @@ let communityRepices = [
       STEP 3 Serve with crusty bread.`,
     "Vegetable",
     false,
-    25
+    25,
+    12
+  ),
+  new Recipe(
+    "../assets/images/High Protein Blueberry Cheesecake.png",
+    "Mango Sticky Rice",
+    "Sweet sticky rice paired with ripe mango and a drizzle of coconut sauce.",
+    "Chloe Tan",
+    "00:50",
+    "00:30",
+    "600 grams",
+    3,
+    [
+      new Food(
+        7,
+        "Ackee, canned, drained",
+        "McCance and Widdowson's",
+        "Vegetables and Vegetable Products",
+        345,
+        new Macronutrient(151, 0.8, 15.2, 2.9),
+        new Micronutrient(
+          0.0, null, 240.0, 76.7, null, 0.06, 0.0,
+          30.0, 0.0, null, null, 0.0, 0, 0, null, null,
+          0.8, 35.0, 0.7, 40.0, 47.0, 270.0, 0.6, 0.27,
+          null, null, null, 0.03, 0.07, 0.6, null, 41.0,
+          null, 0.0, null, null, null, 340.0)
+      ),
+      new Food(
+        8,
+        "Agar, dried, soaked and drained",
+        "McCance and Widdowson's",
+        "Vegetables and Vegetable Products",
+        333,
+        new Macronutrient(20, 0, 0, 0),
+        new Micronutrient(
+          0.0, null, 240.0, 76.7, null, 0.06, 0.0,
+          30.0, 0.0, null, null, 0.0, 0, 0, null, null,
+          0.8, 35.0, 0.7, 40.0, 47.0, 270.0, 0.6, 0.27,
+          null, null, null, 0.03, 0.07, 0.6, null, 41.0,
+          null, 0.0, null, null, null, 340.0)
+      )
+    ],
+    `STEP 1 Cook sticky rice in a steamer for 20 minutes. 
+      STEP 2 Heat coconut milk with sugar and pour over rice. 
+      STEP 3 Serve with sliced mango and extra sauce.`,
+    "Dessert",
+    false,
+    27,
+    13
   )
-  // new Recipe(
-  //   "../assets/images/High Protein Blueberry Cheesecake.png",
-  //   "Mango Sticky Rice",
-  //   "Sweet sticky rice paired with ripe mango and a drizzle of coconut sauce.",
-  //   "Chloe Tan",
-  //   "00:50",
-  //   "00:30",
-  //   "600 grams",
-  //   3,
-  //   [
-  //     new Food(
-  //       7,
-  //       "Ackee, canned, drained",
-  //       "McCance and Widdowson's",
-  //       "Vegetables and Vegetable Products",
-  //       345,
-  //       new Macronutrient(151, 0.8, 15.2, 2.9),
-  //       new Micronutrient(
-  //         0.0, null, 240.0, 76.7, null, 0.06, 0.0,
-  //         30.0, 0.0, null, null, 0.0, 0, 0, null, null,
-  //         0.8, 35.0, 0.7, 40.0, 47.0, 270.0, 0.6, 0.27,
-  //         null, null, null, 0.03, 0.07, 0.6, null, 41.0,
-  //         null, 0.0, null, null, null, 340.0)
-  //     ),
-  //     new Food(
-  //       8,
-  //       "Agar, dried, soaked and drained",
-  //       "McCance and Widdowson's",
-  //       "Vegetables and Vegetable Products",
-  //       333,
-  //       new Macronutrient(20, 0, 0, 0),
-  //       new Micronutrient(
-  //         0.0, null, 240.0, 76.7, null, 0.06, 0.0,
-  //         30.0, 0.0, null, null, 0.0, 0, 0, null, null,
-  //         0.8, 35.0, 0.7, 40.0, 47.0, 270.0, 0.6, 0.27,
-  //         null, null, null, 0.03, 0.07, 0.6, null, 41.0,
-  //         null, 0.0, null, null, null, 340.0)
-  //     )
-  //   ],
-  //   `STEP 1 Cook sticky rice in a steamer for 20 minutes. 
-  //     STEP 2 Heat coconut milk with sugar and pour over rice. 
-  //     STEP 3 Serve with sliced mango and extra sauce.`,
-  //   "Dessert",
-  //   false,
-  //   27
-  // )
 ];
 
 // localStorage.setItem("Community Recipes", JSON.stringify(communityRepices));

@@ -695,6 +695,7 @@ btnSaveRecipes.addEventListener("click", function () {
             inputCategory,
             statuLike,
             count,
+            Date.now()
         );
         communityRepices.push(myRecipesCre);
         console.log(communityRepices);

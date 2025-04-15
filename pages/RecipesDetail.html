@@ -35,7 +35,7 @@
             </nav>
             <div class="btn-sign-out">
                 <span class="icon-sign-out"><i class="fa-solid fa-user-plus"> </i></span>
-                &nbsp;&nbsp;<span>Sign out</span>
+                &nbsp;&nbsp;<span id="btn-sign-out">Sign out</span>
             </div>
         </aside>
 
@@ -45,7 +45,7 @@
     <main>
         <nav class="nav-main">
             <button class="btn-detail" id="btn-detail"><i class="fa-solid fa-bars"></i></button>
-            <a href="w"><span>Đặng Toàn</span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a>
+            <a href=""><span id="nameUser">Đặng Toàn</span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-user"></i></a>
         </nav>
 
         <div class="title">
@@ -56,7 +56,8 @@
         <section class="community-recipes-basic-information">
             <div>
                 <article class="board-category">
-
+                    <span id="image-recipes">
+                    </span>
                     <div class="community-recipes-category-card">
                         <!-- <img src="../assets/images/Turmeric Roasted Cauliflower Salad (lowfodmap).jpg"
                                 class="illustration"> -->
@@ -64,9 +65,9 @@
                             <img src="../assets/icons/Group.png" style="width: 20px; height: 14px;">
                             <p>Community Recipes</p>
                         </div>
-                        <div class="category-card category-card-detail">
-                            <img src="../assets/icons/iconCategory.png">
-                            <p>Vegetarian dishes</p>
+                        <div class="category-card category-card-detail" id="category-card-detail">
+                            <!-- <img src="../assets/icons/iconCategory.png">
+                            <span id="category"><p>Vegetarian dishes</p></span> -->
                         </div>
                     </div>
 
@@ -83,8 +84,8 @@
             </div>
 
             <article class="boart-basic-information">
-                <div class="text-boart-basic-information">
-                    <h3>Basic information</h3>
+                <div class="text-boart-basic-information" id="text-boart-basic-information">
+                    <!-- <h3>Basic information</h3>
                     <p>Check and edit recipe's basic infomation</p>
                     <div class="box-boart-basic-information">
                         <span>Name</span>
@@ -115,7 +116,7 @@
                     <div class="box-boart-basic-information">
                         <span>Portions</span>
                         <span>4</span>
-                    </div>
+                    </div> -->
                 </div>
             </article>
         </section>
@@ -127,58 +128,19 @@
 
         <div class="ingredients-index-caculator">
             <div class="ingredients-index-caculator-1">
-                <article class="ingredients">
-                    <h4>Ingredients</h4>
+                <article class="ingredients" id="ingredients">
+                    <!-- <h4>Ingredients</h4>
                     <p>Search and add ingredients to the recipe</p>
                     <div class="box-ingredient-detail">
                         1 chopped cup (1/2" pieces) of cauliflower, raw(107 g)
-                    </div>
-                    <div class="box-ingredient-detail">
-                        1 tsp of spices, turmeric, ground (3 g)
-                    </div>
-                    <div class="box-ingredient-detail">
-                        1 tbsp of olive oil (14 g)
-                    </div>
-                    <div class="box-ingredient-detail">
-                        100 grams of rice, brown, medium-grain, raw
-                    </div>
-                    <div class="box-ingredient-detail">
-                        150 grams of edamame, frozen, unprepared
-                    </div>
-                    <div class="box-ingredient-detail">
-                        1 cup, sections of lemons, raw, without peel (212 g)
-                    </div>
-                    <div class="box-ingredient-detail">
-                        1 cup slices of cucumber, with peel, raw (104 g)
-                    </div>
-                    <div class="box-ingredient-detail">
-                        4 tbsps of parsley, fresh (15 g)
-                    </div>
-                    <div class="box-ingredient-detail">
-                        50 grams of nuts, cashew nuts, oil roasted, with salt added
-                    </div>
-                    <div class="box-ingredient-detail">
-                        5 tbsps of vinegar, balsamic (80 g)
-                    </div>
-                    <div class="box-ingredient-detail">
-                        4 tbsps of soy sauce made from soy (tamari) (72 g)
-                    </div>
-                    <div class="box-ingredient-detail">
-                        1 tablespoon of oil, sesame, salad or cooking (14 g)
-                    </div>
-                    <div class="box-ingredient-detail">
-                        1 tbsp of sauce, fish, ready-to-serve (18 g)
-                    </div>
-                    <div class="box-ingredient-detail">
-                        2 tbsps of syrups, maple (40 g)
-                    </div>
+                    </div>-->
                 </article>
 
                 <article class="cooking-method">
                     <h4>Cooking method</h4>
                     <span>Give instructions to prepare this recipe</span>
-                    <div class="cooking-method-box">
-                        <p>1</p>
+                    <div class="cooking-method-box" id="cooking-method-box">
+                        <!-- <p>1</p>
                         <p>STEP 1 Heat the oven to 200C/fan 180C/gas 6. Put the cauliflower in an ovenproof dish or tin,
                             add the turmeric,
                             some seasoning and 2 tbsp oil, and toss together. Roast for 20-25 minutes until tender. Tip
@@ -191,7 +153,7 @@
                             STEP 3 Whisk
                             together the dressing ingredients. Divide the cauliflower and rice between plates, scatter
                             over the cashews and
-                            drizzle with the dressing.</p>
+                            drizzle with the dressing.</p> -->
                     </div>
                 </article>
             </div>
@@ -200,220 +162,53 @@
                 <article class="global-analysis-per-portion">
                     <h4>Global analysis per portion</h4>
                     <p>Energy, macronutrients and fiber distribution</p>
-                    <div class="energy-value">
-                        <span>Energy</span>
+                    <div class="energy-value" >
+                        <span id="show-energy">Energy</span>
                         <div>
-                            <span>351</span>
+                            <span id="energy-value">351</span>
                             <span>kcal</span>
                         </div>
                     </div>
 
-                    <div class="note-macronutrients-per-portion">
-                        <div class="circle">
-                            <div class="circle-macronutrients">
+                    <div class="note-macronutrients-per-portion" id="note-macronutrients-per-portion">
+                        <!-- <div class="circle">
+                            <div class="circle-macronutrients" id="circle-macronutrients-fat">
                                 16g
                             </div>
                             <span>Fat</span>
                         </div>
                         <div class="circle">
-                            <div class="circle-macronutrients">
+                            <div class="circle-macronutrients" id="circle-macronutrients-carb">
                                 45g
                             </div>
                             <span>Carbohydrate</span>
                         </div>
                         <div class="circle">
-                            <div class="circle-macronutrients">
+                            <div class="circle-macronutrients" id="circle-macronutrients-protein">
                                 12g
                             </div>
                             <span>Protein</span>
                         </div>
                         <div class="circle">
-                            <div class="circle-macronutrients">
+                            <div class="circle-macronutrients" id="circle-macronutrients-fiber">
                                 6g
                             </div>
                             <span>Fiber</span>
-                        </div>
+                        </div> -->
                     </div>
-                </article>
 
+                </article>
+ 
                 <article class="macronutrients-per-portion">
                     <h4>Macronutrients per portion</h4>
                     <p class="subtitle">Macronutrients distribution of the recipe</p>
                     <canvas id="macronutrientChart"></canvas>
                 </article>
-
                 <article class="micronutrients-per-portion">
                     <h4>Micronutrients per portion</h4>
                     <p>Micronutrients distribution of the recipe</p>
-                    <ul>
-                        <li>
-                            <span>Sodium</span>
-                            <div>
-                                <span>1418</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Vitamin A</span>
-                            <div>
-                                <span>18</span>
-                                <span>ug</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Vitamin B-6</span>
-                            <div>
-                                <span>0</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Vitamin B-12</span>
-                            <div>
-                                <span>1418</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Vitamin C</span>
-                            <div>
-                                <span>50</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Vitamin D (D2 + D3)</span>
-                            <div>
-                                <span>0</span>
-                                <span>ug</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Vitamin E</span>
-                            <div>
-                                <span>1</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Vitamin K</span>
-                            <div>
-                                <span>87</span>
-                                <span>ug</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Sugars</span>
-                            <div>
-                                <span>13</span>
-                                <span>g</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Calcium</span>
-                            <div>
-                                <span>88</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Iron</span>
-                            <div>
-                                <span>4</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Magnesium</span>
-                            <div>
-                                <span>127</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Phosphorus</span>
-                            <div>
-                                <span>251</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Potassium</span>
-                            <div>
-                                <span>649</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Zinc</span>
-                            <div>
-                                <span>2</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Copper</span>
-                            <div>
-                                <span>1</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Fluoride</span>
-                            <div>
-                                <span>1</span>
-                                <span>ug</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Manganese</span>
-                            <div>
-                                <span>2</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Selenium</span>
-                            <div>
-                                <span>4</span>
-                                <span>ug</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Thiamin</span>
-                            <div>
-                                <span>0</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Riboflavin</span>
-                            <div>
-                                <span>0</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Niacin</span>
-                            <div>
-                                <span>3</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Pantothenic acid</span>
-                            <div>
-                                <span>1</span>
-                                <span>mg</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span>Folate, total</span>
-                            <div>
-                                <span>156</span>
-                                <span>ug</span>
-                            </div>
-                        </li>
+                    <ul id="list-mic" class="list-mic">
+                        
                     </ul>
                 </article>
             </div>

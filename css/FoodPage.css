@@ -218,7 +218,7 @@ section h2 {
 
 
 /* Lọc dinh dưỡng */
-.dropdown-container {
+/* .dropdown-container {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
@@ -227,7 +227,7 @@ section h2 {
     padding: 5px;
     position: relative;
     cursor: pointer;
-}
+} */
 
 .icon {
     width: 30px;
@@ -245,7 +245,7 @@ section h2 {
     color: rgb(100, 100, 100);
 }
 
-.dropdown-menu {
+/* .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -269,7 +269,7 @@ section h2 {
 
 .rotate {
     transform: rotate(180deg);
-}
+} */
 
 .search-filter {
     display: flex;
@@ -508,7 +508,7 @@ button:hover {
     background-color: #eee;
     border: 1px solid #eee;
     align-content: center;
-    padding-left: 11px;
+    /* padding-left: 11px; */
 }
 
 .main-information div p:nth-of-type(3) {
@@ -575,7 +575,7 @@ h3 {
     border: 1px solid #eee;
     background-color: #eee;
     align-content: center;
-    padding-left: 12px;
+    /* padding-left: 12px; */
 }
 
 .macronutrients-row p:nth-of-type(3) {
@@ -620,7 +620,7 @@ h3 {
     border: 1px solid #eee;
     background-color: #eee;
     align-content: center;
-    padding-left: 12px;
+    /* padding-left: 12px; */
 }
 
 .element-micronutrients p:nth-of-type(3) {
@@ -905,4 +905,27 @@ select {
     width: 100%;
     border: none;
     outline: none;
+}
+
+.input-edit{
+    width: 100%;
+    height: 100%;
+    padding-left: -12px;
+    outline: 1px solid #eee;
+    border: 1px solid #eee;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.errorr{
+    border: 1px solid red !important;
 }

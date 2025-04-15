@@ -1,5 +1,6 @@
 let recipes = JSON.parse(localStorage.getItem("AccountNow")).personalization;
 let accNow = JSON.parse(localStorage.getItem("AccountNow"));
+let recipesPulic = JSON.parse(localStorage.getItem("Community Recipes"));
 // Hành động chuyển trang
 const gotoFood = document.getElementById("foods");
 const gotoRecipes = document.getElementById("recipes");
@@ -267,52 +268,64 @@ hideSidebar.addEventListener("click", function () {
 });
 
 // like
-like();
-let likeUser = [];
+like()
 
 function like() {
     const likeButtons = document.querySelectorAll(".click-like");
 
     likeButtons.forEach((button, index) => {
-        let liked = false;
         const unlike = button.querySelector(".unlike");
         const like = button.querySelector(".like");
         const likeCount = button.querySelector(".like-count");
-
         let count = parseInt(likeCount.textContent) || 0;
 
-        button.addEventListener("click", () => {
-            liked = !liked;
+        if (recipes[index].like === true) {
+            unlike.classList.add("heart-none");
+            like.classList.remove("heart-none");
+            button.classList.add("liked");
+        }
 
-            if (liked) {
+        button.addEventListener("click", () => {
+            let liked = recipes[index].like;
+            
+            if (!liked) {
                 count++;
+                recipes[index].like = true;
+                recipes[index].numberLike = count;
                 unlike.classList.add("heart-none");
                 like.classList.remove("heart-none");
                 button.classList.add("liked");
-                recipes[index].like = true;
-                recipes[index].numberLike++;
+
                 accNow.personalization.push(recipes[index]);
-                localStorage.setItem("Community Recipes", JSON.stringify(recipes));
-                localStorage.setItem("AccountNow", JSON.stringify(accNow));
+
+                for (let i = 0; i < recipesPulic.length; i++) {
+                    if (recipesPulic[i].id === recipes[index].id) {
+                        recipesPulic[i].numberLike++;
+                        recipesPulic[i].like = true;
+                    }
+                }
+
             } else {
-                count--;
+                count = Math.max(0, count - 1);
+                recipes[index].like = false;
+                recipes[index].numberLike = count;
                 unlike.classList.remove("heart-none");
                 like.classList.add("heart-none");
                 button.classList.remove("liked");
-                recipes[index].like = false;
-                recipes[index].numberLike--;
-                accNow.personalization.splice(index, 1);
-                localStorage.setItem("Community Recipes", JSON.stringify(recipes));
-                localStorage.setItem("AccountNow", JSON.stringify(accNow));
-            }
 
-            if (recipes[index].like === true) {
-                unlike.classList.add("heart-none");
-                like.classList.remove("heart-none");
+                accNow.personalization = accNow.personalization.filter(item => item.id !== recipes[index].id);
+
+                for (let i = 0; i < recipesPulic.length; i++) {
+                    if (recipesPulic[i].id === recipes[index].id) {
+                        recipesPulic[i].numberLike--;
+                        recipesPulic[i].like = false;
+                    }
+                }
             }
 
             likeCount.textContent = count;
-
+            localStorage.setItem("Community Recipes", JSON.stringify(recipesPulic));
+            localStorage.setItem("AccountNow", JSON.stringify(accNow));
         });
     });
 }
